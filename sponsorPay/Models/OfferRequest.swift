@@ -20,11 +20,11 @@ class OfferRequest: NSObject {
 	var locale: String? = defaultLocale
 	var ip: String? = defaultIp
 	var offerTypes: String? = defaultOfferTypes;
-	var appleIdfa: String?
-	var deviceId: String?
+	var deviceId: String
 	var page: String?
 	var ps_time: String?
 	var pub0: String?
+	
 	var fixedTimestamp: String?
 	var timestamp: String {
 		get {
@@ -37,7 +37,8 @@ class OfferRequest: NSObject {
 	}
 	
 	override init() {
-		super.init();
+		self.deviceId = ASIdentifierManager.sharedManager().advertisingIdentifier.UUIDString
+		super.init()
 	}
 	
 	/// Return ordered URL params (except hash)
@@ -49,11 +50,10 @@ class OfferRequest: NSObject {
 		if self.locale != nil { params.setObject(self.locale!, forKey: "locale") }
 		if self.ip != nil { params.setObject(self.ip!, forKey: "ip") }
 		if self.offerTypes != nil { params.setObject(self.offerTypes!, forKey: "offer_types") }
-		if self.appleIdfa != nil { params.setObject(self.appleIdfa!, forKey: "apple_idfa") }
-		if self.deviceId != nil { params.setObject(self.deviceId!, forKey: "device_id") }
 		if self.page != nil { params.setObject(self.page!, forKey: "page") }
 		if self.ps_time != nil { params.setObject(self.ps_time!, forKey: "ps_time") }
 		if self.pub0 != nil { params.setObject(self.pub0!, forKey: "pub0") }
+		params.setObject(self.deviceId, forKey: "device_id")
 		params.setObject(self.timestamp, forKey: "timestamp")
 	
 
@@ -118,4 +118,5 @@ class OfferRequest: NSObject {
 	func setApiKey(apiKey newApiKey:String) {
 		apiKey = newApiKey;
 	}
+	
 }

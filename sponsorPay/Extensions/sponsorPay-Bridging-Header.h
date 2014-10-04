@@ -3,3 +3,4 @@
 //
 
 #import "NSString+Hashes.h"
+#import <AdSupport/AdSupport.h>
