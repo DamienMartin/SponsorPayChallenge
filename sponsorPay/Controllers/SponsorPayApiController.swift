@@ -34,7 +34,7 @@ class SponsorPayApiController: NSObject {
 		return "\(uriString)?\(paramsString)"
 	}
 	
-	func connect(query: OfferRequest, completionHandler handler: ((NSDictionary!) -> Void)!) {
+	func getOffers(query: OfferRequest, completionHandler handler: ((NSDictionary!) -> Void)!) {
 		
 		var url: NSURL = NSURL(string: self.uriForRequest(query));
 		

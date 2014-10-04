@@ -8,11 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, OfferFormViewDelegate {
 
+	@IBOutlet var form: OfferFormView?
+	
+	required init(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder);
+	}
+	
+	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil);
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		
+		form?.delegate = self
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -21,5 +32,13 @@ class ViewController: UIViewController {
 	}
 
 
+	// MARK: - OfferFormViewDelegate
+	func formDidValidate(offerRequest: OfferRequest) {
+		let apiController: SponsorPayApiController = SponsorPayApiController();
+		apiController.getOffers(offerRequest, completionHandler: { (resultDictionnary) -> Void in
+			println("resultDictionnay")
+		})
+	}
+	
 }
 

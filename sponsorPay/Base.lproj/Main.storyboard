@@ -42,6 +42,9 @@
                             <constraint firstItem="a3L-Wk-4SH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="119" id="qXb-8b-C45"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="form" destination="a3L-Wk-4SH" id="s54-H3-T2l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
