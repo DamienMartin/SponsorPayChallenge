@@ -31,7 +31,10 @@ class SponsorPayApiController: NSObject {
 	func uriForRequest(query: OfferRequest) -> String {
 		let uriString: String = self.uriForEndPoint(SponsorPayEndPoint.Offers)
 		let paramsString: String = query.requestParamsValue(apiKey: false, hashValue: true)
-		return "\(uriString)?\(paramsString)"
+		let uriForRequest = "\(uriString)?\(paramsString)"
+		
+		println("URI For Request : \(uriForRequest)")
+		return uriForRequest
 	}
 	
 	func getOffers(query: OfferRequest, completionHandler handler: ((NSDictionary!) -> Void)!) {
