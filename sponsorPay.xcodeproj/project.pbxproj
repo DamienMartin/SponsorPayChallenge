@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB5F74FC19DFF45E002C0025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5F74FB19DFF45E002C0025 /* AppDelegate.swift */; };
+		BB5F74FE19DFF45E002C0025 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5F74FD19DFF45E002C0025 /* ViewController.swift */; };
+		BB5F750119DFF45E002C0025 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5F74FF19DFF45E002C0025 /* Main.storyboard */; };
+		BB5F750319DFF45E002C0025 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB5F750219DFF45E002C0025 /* Images.xcassets */; };
+		BB5F750619DFF45E002C0025 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB5F750419DFF45E002C0025 /* LaunchScreen.xib */; };
+		BB5F751219DFF45E002C0025 /* sponsorPayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5F751119DFF45E002C0025 /* sponsorPayTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB5F750C19DFF45E002C0025 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB5F74EE19DFF45E002C0025 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB5F74F519DFF45E002C0025;
+			remoteInfo = sponsorPay;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BB5F74F619DFF45E002C0025 /* sponsorPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sponsorPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB5F74FA19DFF45E002C0025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB5F74FB19DFF45E002C0025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BB5F74FD19DFF45E002C0025 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BB5F750019DFF45E002C0025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BB5F750219DFF45E002C0025 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BB5F750519DFF45E002C0025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BB5F750B19DFF45E002C0025 /* sponsorPayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sponsorPayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB5F751019DFF45E002C0025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB5F751119DFF45E002C0025 /* sponsorPayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sponsorPayTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB5F74F319DFF45E002C0025 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB5F750819DFF45E002C0025 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB5F74ED19DFF45E002C0025 = {
+			isa = PBXGroup;
+			children = (
+				BB5F74F819DFF45E002C0025 /* sponsorPay */,
+				BB5F750E19DFF45E002C0025 /* sponsorPayTests */,
+				BB5F74F719DFF45E002C0025 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BB5F74F719DFF45E002C0025 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB5F74F619DFF45E002C0025 /* sponsorPay.app */,
+				BB5F750B19DFF45E002C0025 /* sponsorPayTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB5F74F819DFF45E002C0025 /* sponsorPay */ = {
+			isa = PBXGroup;
+			children = (
+				BB5F74FB19DFF45E002C0025 /* AppDelegate.swift */,
+				BB5F74FD19DFF45E002C0025 /* ViewController.swift */,
+				BB5F74FF19DFF45E002C0025 /* Main.storyboard */,
+				BB5F750219DFF45E002C0025 /* Images.xcassets */,
+				BB5F750419DFF45E002C0025 /* LaunchScreen.xib */,
+				BB5F74F919DFF45E002C0025 /* Supporting Files */,
+			);
+			path = sponsorPay;
+			sourceTree = "<group>";
+		};
+		BB5F74F919DFF45E002C0025 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB5F74FA19DFF45E002C0025 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BB5F750E19DFF45E002C0025 /* sponsorPayTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB5F751119DFF45E002C0025 /* sponsorPayTests.swift */,
+				BB5F750F19DFF45E002C0025 /* Supporting Files */,
+			);
+			path = sponsorPayTests;
+			sourceTree = "<group>";
+		};
+		BB5F750F19DFF45E002C0025 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB5F751019DFF45E002C0025 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB5F74F519DFF45E002C0025 /* sponsorPay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB5F751519DFF45E002C0025 /* Build configuration list for PBXNativeTarget "sponsorPay" */;
+			buildPhases = (
+				BB5F74F219DFF45E002C0025 /* Sources */,
+				BB5F74F319DFF45E002C0025 /* Frameworks */,
+				BB5F74F419DFF45E002C0025 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sponsorPay;
+			productName = sponsorPay;
+			productReference = BB5F74F619DFF45E002C0025 /* sponsorPay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BB5F750A19DFF45E002C0025 /* sponsorPayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB5F751819DFF45E002C0025 /* Build configuration list for PBXNativeTarget "sponsorPayTests" */;
+			buildPhases = (
+				BB5F750719DFF45E002C0025 /* Sources */,
+				BB5F750819DFF45E002C0025 /* Frameworks */,
+				BB5F750919DFF45E002C0025 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB5F750D19DFF45E002C0025 /* PBXTargetDependency */,
+			);
+			name = sponsorPayTests;
+			productName = sponsorPayTests;
+			productReference = BB5F750B19DFF45E002C0025 /* sponsorPayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB5F74EE19DFF45E002C0025 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Damien Martin";
+				TargetAttributes = {
+					BB5F74F519DFF45E002C0025 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					BB5F750A19DFF45E002C0025 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = BB5F74F519DFF45E002C0025;
+					};
+				};
+			};
+			buildConfigurationList = BB5F74F119DFF45E002C0025 /* Build configuration list for PBXProject "sponsorPay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BB5F74ED19DFF45E002C0025;
+			productRefGroup = BB5F74F719DFF45E002C0025 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB5F74F519DFF45E002C0025 /* sponsorPay */,
+				BB5F750A19DFF45E002C0025 /* sponsorPayTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB5F74F419DFF45E002C0025 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB5F750119DFF45E002C0025 /* Main.storyboard in Resources */,
+				BB5F750619DFF45E002C0025 /* LaunchScreen.xib in Resources */,
+				BB5F750319DFF45E002C0025 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB5F750919DFF45E002C0025 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB5F74F219DFF45E002C0025 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB5F74FE19DFF45E002C0025 /* ViewController.swift in Sources */,
+				BB5F74FC19DFF45E002C0025 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB5F750719DFF45E002C0025 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB5F751219DFF45E002C0025 /* sponsorPayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB5F750D19DFF45E002C0025 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB5F74F519DFF45E002C0025 /* sponsorPay */;
+			targetProxy = BB5F750C19DFF45E002C0025 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BB5F74FF19DFF45E002C0025 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB5F750019DFF45E002C0025 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BB5F750419DFF45E002C0025 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB5F750519DFF45E002C0025 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BB5F751319DFF45E002C0025 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB5F751419DFF45E002C0025 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB5F751619DFF45E002C0025 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = sponsorPay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BB5F751719DFF45E002C0025 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = sponsorPay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BB5F751919DFF45E002C0025 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = sponsorPayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sponsorPay.app/sponsorPay";
+			};
+			name = Debug;
+		};
+		BB5F751A19DFF45E002C0025 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = sponsorPayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sponsorPay.app/sponsorPay";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB5F74F119DFF45E002C0025 /* Build configuration list for PBXProject "sponsorPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB5F751319DFF45E002C0025 /* Debug */,
+				BB5F751419DFF45E002C0025 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB5F751519DFF45E002C0025 /* Build configuration list for PBXNativeTarget "sponsorPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB5F751619DFF45E002C0025 /* Debug */,
+				BB5F751719DFF45E002C0025 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BB5F751819DFF45E002C0025 /* Build configuration list for PBXNativeTarget "sponsorPayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB5F751919DFF45E002C0025 /* Debug */,
+				BB5F751A19DFF45E002C0025 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB5F74EE19DFF45E002C0025 /* Project object */;
+}
