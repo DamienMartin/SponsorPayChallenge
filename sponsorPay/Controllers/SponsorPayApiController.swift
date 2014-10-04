@@ -46,14 +46,37 @@ class SponsorPayApiController: NSObject {
 		NSURLConnection.sendAsynchronousRequest(request1, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
 			var err: NSError
 			
-			var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
-
-			println("Response \(jsonResult)")
+			var errorMessage: String?
+			var jsonResult: NSDictionary?
 			
+			// Get hash header response
+			if self.checkResponse(data, response: response) == true {
+				jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary
+			}
+			else {
+				errorMessage = "invalid server response ..."
+			}
+
 			NSOperationQueue.mainQueue().addOperationWithBlock() {
-				handler(jsonResult, error: nil);
+				handler(jsonResult, error: errorMessage);
 			}
 		})
+	}
+	
+	func checkResponse(data: NSData!, response:NSURLResponse) -> Bool {
+		let responseHttp = response as NSHTTPURLResponse
+		if let responseHash: String = responseHttp.allHeaderFields[headerHTTPResponseHash] as? NSString {
+			
+			// Check if is correct hash
+			let responseString = NSString(data: data, encoding: NSUTF8StringEncoding)
+			let valueToHash = "\(responseString)\(defaultApiKey)" as NSString
+			let bodyHash = valueToHash.sha1
+			
+			if bodyHash == responseHash {
+				return true
+			}
+		}
+		return false
 	}
 	
 }

@@ -20,3 +20,5 @@ let defaultPub0 = "campaign2"
 let apiDomainName: String = "api.sponsorpay.com"
 let apiUri: String = "/feed/v1"
 let apiOffersEndPoint: String = "/offers.json"
+
+let headerHTTPResponseHash: String = "X-Sponsorpay-Response-Signature"
