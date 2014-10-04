@@ -33,7 +33,6 @@ class SponsorPayApiController: NSObject {
 		let paramsString: String = query.requestParamsValue(apiKey: false, hashValue: true)
 		let uriForRequest = "\(uriString)?\(paramsString)"
 		
-		println("URI For Request : \(uriForRequest)")
 		return uriForRequest
 	}
 	

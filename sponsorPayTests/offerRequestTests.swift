@@ -16,7 +16,7 @@ class offerRequestTests: XCTestCase {
     override func setUp() {
         super.setUp()
 		request = OfferRequest();
-		
+		request!.fixedTimestamp = "1312553361"
     }
     
     override func tearDown() {
@@ -54,7 +54,7 @@ class offerRequestTests: XCTestCase {
 	
 		XCTAssertFalse(requestParamsValue.isEmpty, "requestParamsValue is Empty")
 		
-		let defaultValue = "appid=2070&format=json&ip=109.235.143.113&locale=DE&offer_types=112&uid=spiderman"
+		let defaultValue = "appid=2070&format=json&ip=109.235.143.113&locale=DE&offer_types=112&timestamp=1312553361&uid=spiderman"
 		XCTAssert( (requestParamsValue == defaultValue), "requestParamsValue is wrong \(requestParamsValue) != \(defaultValue)")
 		
 	}
@@ -66,7 +66,7 @@ class offerRequestTests: XCTestCase {
 		let requestParamsValue = self.request!.requestParamsValue(apiKey: false, hashValue: false)
 		
 		// Test with no APIKey and no HashKey
-		let defaultValue = "appid=2070&format=json&ip=109.235.143.113&locale=DE&offer_types=112&uid=spiderman"
+		let defaultValue = "appid=2070&format=json&ip=109.235.143.113&locale=DE&offer_types=112&timestamp=1312553361&uid=spiderman"
 		XCTAssert( (requestParamsValue == defaultValue), "requestParamsValue is wrong \(requestParamsValue) != \(defaultValue)")
 		
 		// Test with no APIKey and HashKey
@@ -94,7 +94,6 @@ class offerRequestTests: XCTestCase {
 		request!.page = "2"
 		request!.ps_time = "1312211903"
 		request!.pub0 = "campaign2"
-		request!.timestamp = "1312553361"
 		request!.uid = "player1"
 		request!.offerTypes = nil;
 		request!.format = nil;

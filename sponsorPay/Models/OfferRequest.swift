@@ -25,7 +25,16 @@ class OfferRequest: NSObject {
 	var page: String?
 	var ps_time: String?
 	var pub0: String?
-	var timestamp: String?
+	var fixedTimestamp: String?
+	var timestamp: String {
+		get {
+			if fixedTimestamp == nil { self.fixedTimestamp = NSDate().timeIntervalSince1970.description }
+			return self.fixedTimestamp!
+		}
+		set {
+			self.timestamp = newValue
+		}
+	}
 	
 	override init() {
 		super.init();
@@ -45,7 +54,7 @@ class OfferRequest: NSObject {
 		if self.page != nil { params.setObject(self.page!, forKey: "page") }
 		if self.ps_time != nil { params.setObject(self.ps_time!, forKey: "ps_time") }
 		if self.pub0 != nil { params.setObject(self.pub0!, forKey: "pub0") }
-		if self.timestamp != nil { params.setObject(self.timestamp!, forKey: "timestamp") }
+		params.setObject(self.timestamp, forKey: "timestamp")
 	
 
 		var paramsToReturn: NSMutableArray = NSMutableArray();

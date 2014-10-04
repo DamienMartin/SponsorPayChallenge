@@ -24,8 +24,6 @@ class OfferFormView: UIView {
 	
 	var delegate: OfferFormViewDelegate?
 	
-	
-	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		self.initialized()
