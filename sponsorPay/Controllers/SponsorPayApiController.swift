@@ -36,7 +36,7 @@ class SponsorPayApiController: NSObject {
 		return uriForRequest
 	}
 	
-	func getOffers(query: OfferRequest, completionHandler handler: ((NSDictionary!) -> Void)!) {
+	func getOffers(query: OfferRequest, completionHandler handler: ((NSDictionary!, error: NSString?) -> Void)!) {
 		
 		var url: NSURL = NSURL(string: self.uriForRequest(query));
 		
@@ -50,7 +50,9 @@ class SponsorPayApiController: NSObject {
 
 			println("Response \(jsonResult)")
 			
-			handler(jsonResult);
+			NSOperationQueue.mainQueue().addOperationWithBlock() {
+				handler(jsonResult, error: nil);
+			}
 		})
 	}
 	

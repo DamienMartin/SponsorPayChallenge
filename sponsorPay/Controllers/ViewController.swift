@@ -35,7 +35,11 @@ class ViewController: UIViewController, OfferFormViewDelegate {
 	// MARK: - OfferFormViewDelegate
 	func formDidValidate(offerRequest: OfferRequest) {
 		let apiController: SponsorPayApiController = SponsorPayApiController();
-		apiController.getOffers(offerRequest, completionHandler: { (resultDictionnary) -> Void in
+		apiController.getOffers(offerRequest, completionHandler: { (result, error) -> Void in
+			if error != nil {
+				let alert: UIAlertView = UIAlertView(title: "Error", message: error!, delegate: nil, cancelButtonTitle: "Ok");
+				alert.show();
+			}
 			println("resultDictionnay")
 		})
 	}
