@@ -17,6 +17,8 @@
 		BB46A55E19E03268002A2CC5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB46A55D19E03268002A2CC5 /* SystemConfiguration.framework */; };
 		BB46A55F19E034D4002A2CC5 /* NSString+Hashes.m in Sources */ = {isa = PBXBuildFile; fileRef = BB46A55B19E03204002A2CC5 /* NSString+Hashes.m */; };
 		BB46A56019E034F6002A2CC5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB46A55D19E03268002A2CC5 /* SystemConfiguration.framework */; };
+		BB46A56719E03EAE002A2CC5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB46A56619E03EAE002A2CC5 /* AdSupport.framework */; };
+		BB46A56819E03EB3002A2CC5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB46A56619E03EAE002A2CC5 /* AdSupport.framework */; };
 		BB5F74FC19DFF45E002C0025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5F74FB19DFF45E002C0025 /* AppDelegate.swift */; };
 		BB5F750119DFF45E002C0025 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5F74FF19DFF45E002C0025 /* Main.storyboard */; };
 		BB5F750319DFF45E002C0025 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB5F750219DFF45E002C0025 /* Images.xcassets */; };
@@ -45,6 +47,7 @@
 		BB46A55A19E03204002A2CC5 /* NSString+Hashes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashes.h"; sourceTree = "<group>"; };
 		BB46A55B19E03204002A2CC5 /* NSString+Hashes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hashes.m"; sourceTree = "<group>"; };
 		BB46A55D19E03268002A2CC5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BB46A56619E03EAE002A2CC5 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		BB5F74F619DFF45E002C0025 /* sponsorPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sponsorPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB5F74FA19DFF45E002C0025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB5F74FB19DFF45E002C0025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB46A55E19E03268002A2CC5 /* SystemConfiguration.framework in Frameworks */,
+				BB46A56819E03EB3002A2CC5 /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB46A56719E03EAE002A2CC5 /* AdSupport.framework in Frameworks */,
 				BB46A56019E034F6002A2CC5 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +89,7 @@
 		BB46A54F19E02F73002A2CC5 /* Frameworks - Libs */ = {
 			isa = PBXGroup;
 			children = (
+				BB46A56619E03EAE002A2CC5 /* AdSupport.framework */,
 				BB46A55D19E03268002A2CC5 /* SystemConfiguration.framework */,
 			);
 			name = "Frameworks - Libs";
