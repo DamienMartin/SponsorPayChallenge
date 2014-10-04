@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		BB5F74FC19DFF45E002C0025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5F74FB19DFF45E002C0025 /* AppDelegate.swift */; };
-		BB5F74FE19DFF45E002C0025 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5F74FD19DFF45E002C0025 /* ViewController.swift */; };
 		BB5F750119DFF45E002C0025 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5F74FF19DFF45E002C0025 /* Main.storyboard */; };
 		BB5F750319DFF45E002C0025 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB5F750219DFF45E002C0025 /* Images.xcassets */; };
 		BB5F750619DFF45E002C0025 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB5F750419DFF45E002C0025 /* LaunchScreen.xib */; };
 		BB5F751219DFF45E002C0025 /* sponsorPayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5F751119DFF45E002C0025 /* sponsorPayTests.swift */; };
+		BB5F751F19DFF900002C0025 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5F751E19DFF900002C0025 /* FormView.swift */; };
+		BB5F752319DFF94C002C0025 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5F752219DFF94C002C0025 /* ViewController.swift */; };
+		BBB9D6D519DFFC3E00308729 /* extensionsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB9D6D419DFFC3E00308729 /* extensionsViews.swift */; };
+		BBB9D6D719E0057E00308729 /* OfferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB9D6D619E0057E00308729 /* OfferRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +32,16 @@
 		BB5F74F619DFF45E002C0025 /* sponsorPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sponsorPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB5F74FA19DFF45E002C0025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB5F74FB19DFF45E002C0025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB5F74FD19DFF45E002C0025 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BB5F750019DFF45E002C0025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB5F750219DFF45E002C0025 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BB5F750519DFF45E002C0025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		BB5F750B19DFF45E002C0025 /* sponsorPayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sponsorPayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB5F751019DFF45E002C0025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB5F751119DFF45E002C0025 /* sponsorPayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sponsorPayTests.swift; sourceTree = "<group>"; };
+		BB5F751E19DFF900002C0025 /* FormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		BB5F752219DFF94C002C0025 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BBB9D6D419DFFC3E00308729 /* extensionsViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensionsViews.swift; sourceTree = "<group>"; };
+		BBB9D6D619E0057E00308729 /* OfferRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +83,11 @@
 		BB5F74F819DFF45E002C0025 /* sponsorPay */ = {
 			isa = PBXGroup;
 			children = (
+				BBB9D6D319DFFC1100308729 /* Extensions */,
+				BB5F752119DFF933002C0025 /* Models */,
+				BB5F752019DFF92B002C0025 /* ViewsControllers */,
+				BB5F751B19DFF8B3002C0025 /* Views */,
 				BB5F74FB19DFF45E002C0025 /* AppDelegate.swift */,
-				BB5F74FD19DFF45E002C0025 /* ViewController.swift */,
 				BB5F74FF19DFF45E002C0025 /* Main.storyboard */,
 				BB5F750219DFF45E002C0025 /* Images.xcassets */,
 				BB5F750419DFF45E002C0025 /* LaunchScreen.xib */,
@@ -110,6 +119,38 @@
 				BB5F751019DFF45E002C0025 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BB5F751B19DFF8B3002C0025 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB5F751E19DFF900002C0025 /* FormView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BB5F752019DFF92B002C0025 /* ViewsControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BB5F752219DFF94C002C0025 /* ViewController.swift */,
+			);
+			path = ViewsControllers;
+			sourceTree = "<group>";
+		};
+		BB5F752119DFF933002C0025 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BBB9D6D619E0057E00308729 /* OfferRequest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BBB9D6D319DFFC1100308729 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BBB9D6D419DFFC3E00308729 /* extensionsViews.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +253,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB5F74FE19DFF45E002C0025 /* ViewController.swift in Sources */,
+				BB5F752319DFF94C002C0025 /* ViewController.swift in Sources */,
+				BB5F751F19DFF900002C0025 /* FormView.swift in Sources */,
+				BBB9D6D519DFFC3E00308729 /* extensionsViews.swift in Sources */,
+				BBB9D6D719E0057E00308729 /* OfferRequest.swift in Sources */,
 				BB5F74FC19DFF45E002C0025 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +451,7 @@
 				BB5F751719DFF45E002C0025 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BB5F751819DFF45E002C0025 /* Build configuration list for PBXNativeTarget "sponsorPayTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +460,7 @@
 				BB5F751A19DFF45E002C0025 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
