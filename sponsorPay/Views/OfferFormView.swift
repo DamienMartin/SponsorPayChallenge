@@ -60,10 +60,25 @@ class OfferFormView: UIView {
 		self.validateButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Highlighted)
 		self.validateButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
 		self.addSubview(validateButton);
+		
+		self.fillTextFieldWithDefaultValue();
+	}
+	
+	func fillTextFieldWithDefaultValue() {
+		let request: OfferRequest = self.requestObject()
+		if request.uid?.isEmpty	== false	{ self.uidTextField.text = request.uid }
+		if request.appid?.isEmpty == false	{ self.appIdTextField.text = request.appid}
+		if request.apiKey.isEmpty == false	{ self.apiKeyTextField.text = request.apiKey }
+		if request.pub0?.isEmpty == false	{ self.pub0TextField.text = request.pub0 }
 	}
 	
 	func validateForm() {
 		let request: OfferRequest = self.requestObject()
+		request.uid = self.uidTextField.text
+		request.appid = self.appIdTextField.text
+		request.apiKey = self.apiKeyTextField.text
+		request.pub0 = self.pub0TextField.text
+		
 		if delegate != nil {
 			delegate?.formDidValidate(request)
 		}

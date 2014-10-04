@@ -10,8 +10,8 @@ import UIKit
 
 class OfferRequest: NSObject {
 	
-	/* private */
-	private var apiKey: String = defaultApiKey;
+	/* params */
+	var apiKey: String = defaultApiKey;
 	
 	/* request Params */
 	var format: String? =  defaultFormat
@@ -112,11 +112,6 @@ class OfferRequest: NSObject {
 	func authenticationHash() -> String {
 		let valueToHash = self.requestParamsValue(apiKey: true, hashValue: false);
 		return valueToHash.sha1.lowercaseString;
-	}
-	
-	/// Only use for test
-	func setApiKey(apiKey newApiKey:String) {
-		apiKey = newApiKey;
 	}
 	
 }

@@ -78,7 +78,7 @@ class offerRequestTests: XCTestCase {
 		
 		// Test with APIKey and no HashKey
 		let testApiKey = "123456789"
-		self.request!.setApiKey(apiKey: testApiKey)
+		self.request!.apiKey = testApiKey
 		let requestParamsValueWithApiKey = self.request!.requestParamsValue(apiKey: true, hashValue: false)
 		let defaultValueWithApiKey = "\(defaultValue)&\(testApiKey)"
 		XCTAssert( (requestParamsValueWithApiKey == defaultValueWithApiKey), "requestParamsValue is wrong \(requestParamsValueWithApiKey) != \(defaultValueWithApiKey)")
@@ -95,26 +95,26 @@ class offerRequestTests: XCTestCase {
 		request!.ps_time = "1312211903"
 		request!.pub0 = "campaign2"
 		request!.uid = "player1"
-		request!.offerTypes = nil;
-		request!.format = nil;
+		request!.offerTypes = nil
+		request!.format = nil
 		
-		request!.setApiKey(apiKey: "e95a21621a1865bcbae3bee89c4d4f84")
+		request!.apiKey = "e95a21621a1865bcbae3bee89c4d4f84"
 		
 		let paramsValue = request!.requestParamsValue(apiKey: false, hashValue: false)
 		let normalParamsValue = "appid=\(request!.appid!)&device_id=\(request!.deviceId)&ip=\(request!.ip!)&locale=\(request!.locale!)&page=\(request!.page!)&ps_time=\(request!.ps_time!)&pub0=\(request!.pub0!)&timestamp=\(request!.timestamp)&uid=\(request!.uid!)"
 		
-		XCTAssert( (paramsValue == normalParamsValue), "paramsValue not good : \(paramsValue) != \(normalParamsValue)");
+		XCTAssert( (paramsValue == normalParamsValue), "paramsValue not good : \(paramsValue) != \(normalParamsValue)")
 		
-		let hash = self.request!.authenticationHash();
-		XCTAssertFalse( hash.isEmpty, "Hash is empty");
+		let hash = self.request!.authenticationHash()
+		XCTAssertFalse( hash.isEmpty, "Hash is empty")
 		
 		let testHash = self.request!.requestParamsValue(apiKey: true, hashValue: false).sha1.lowercaseString
-		XCTAssert( (hash == testHash), "Wrong hash : \(hash) != \(testHash)" );
+		XCTAssert( (hash == testHash), "Wrong hash : \(hash) != \(testHash)" )
 		
 		// Change one params and see if hash is different 
 		self.request!.page = "3"
-		let newHash = self.request!.authenticationHash();
-		XCTAssert( (hash != newHash), "Hash don't change : \(hash) != \(newHash)" );
+		let newHash = self.request!.authenticationHash()
+		XCTAssert( (hash != newHash), "Hash don't change : \(hash) != \(newHash)" )
 	}
 
 }
