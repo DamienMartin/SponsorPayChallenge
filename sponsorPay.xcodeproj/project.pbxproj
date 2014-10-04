@@ -122,7 +122,7 @@
 				BB46A56119E03587002A2CC5 /* Tools */,
 				BBB9D6D319DFFC1100308729 /* Extensions */,
 				BB5F752119DFF933002C0025 /* Models */,
-				BB5F752019DFF92B002C0025 /* ViewsControllers */,
+				BB5F752019DFF92B002C0025 /* Controllers */,
 				BB5F751B19DFF8B3002C0025 /* Views */,
 				BB5F74FB19DFF45E002C0025 /* AppDelegate.swift */,
 				BB5F74FF19DFF45E002C0025 /* Main.storyboard */,
@@ -168,12 +168,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		BB5F752019DFF92B002C0025 /* ViewsControllers */ = {
+		BB5F752019DFF92B002C0025 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				BB5F752219DFF94C002C0025 /* ViewController.swift */,
 			);
-			path = ViewsControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		BB5F752119DFF933002C0025 /* Models */ = {

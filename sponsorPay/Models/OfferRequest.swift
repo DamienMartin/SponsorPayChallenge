@@ -66,7 +66,7 @@ class OfferRequest: NSObject {
 	}
 	
 	/// Return concat URL params string (except hash)
-	func requestParamsValue() -> String {
+	func requestParamsValue(apiKey apiKeyDisplayed:Bool) -> String {
 		let paramsOrdered = self.orderedParams();
 		
 		var paramsValue: String = "";
@@ -84,13 +84,18 @@ class OfferRequest: NSObject {
 			}
 		}
 		
+		// Add apiKey if is asked
+		if(apiKeyDisplayed) {
+			if paramsValue.isEmpty { paramsValue = self.apiKey }
+			else { paramsValue += "&\(self.apiKey)" }
+		}
+		
 		return paramsValue;
 	}
 	
+	/// return authentication hash for the request
 	func authenticationHash() -> String {
-		let paramsValue = self.requestParamsValue();
-		let valueToHash: NSString = "\(paramsValue)&\(self.apiKey)" as NSString
-		
+		let valueToHash = self.requestParamsValue(apiKey: true);
 		return valueToHash.sha1;
 	}
 	
