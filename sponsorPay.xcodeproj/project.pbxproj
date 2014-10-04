@@ -19,6 +19,9 @@
 		BB46A56019E034F6002A2CC5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB46A55D19E03268002A2CC5 /* SystemConfiguration.framework */; };
 		BB46A56719E03EAE002A2CC5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB46A56619E03EAE002A2CC5 /* AdSupport.framework */; };
 		BB46A56819E03EB3002A2CC5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB46A56619E03EAE002A2CC5 /* AdSupport.framework */; };
+		BB46A56A19E08BE0002A2CC5 /* SponsorPayApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB46A56919E08BE0002A2CC5 /* SponsorPayApiController.swift */; };
+		BB46A56B19E08BE2002A2CC5 /* SponsorPayApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB46A56919E08BE0002A2CC5 /* SponsorPayApiController.swift */; };
+		BB46A56D19E08DA8002A2CC5 /* apiControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB46A56C19E08DA8002A2CC5 /* apiControllerTests.swift */; };
 		BB5F74FC19DFF45E002C0025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5F74FB19DFF45E002C0025 /* AppDelegate.swift */; };
 		BB5F750119DFF45E002C0025 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5F74FF19DFF45E002C0025 /* Main.storyboard */; };
 		BB5F750319DFF45E002C0025 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB5F750219DFF45E002C0025 /* Images.xcassets */; };
@@ -48,6 +51,8 @@
 		BB46A55B19E03204002A2CC5 /* NSString+Hashes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hashes.m"; sourceTree = "<group>"; };
 		BB46A55D19E03268002A2CC5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BB46A56619E03EAE002A2CC5 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		BB46A56919E08BE0002A2CC5 /* SponsorPayApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorPayApiController.swift; sourceTree = "<group>"; };
+		BB46A56C19E08DA8002A2CC5 /* apiControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = apiControllerTests.swift; sourceTree = "<group>"; };
 		BB5F74F619DFF45E002C0025 /* sponsorPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sponsorPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB5F74FA19DFF45E002C0025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB5F74FB19DFF45E002C0025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +156,7 @@
 		BB5F750E19DFF45E002C0025 /* sponsorPayTests */ = {
 			isa = PBXGroup;
 			children = (
+				BB46A56C19E08DA8002A2CC5 /* apiControllerTests.swift */,
 				BB46A54619E00D4D002A2CC5 /* offerRequestTests.swift */,
 				BB5F751119DFF45E002C0025 /* sponsorPayTests.swift */,
 				BB5F750F19DFF45E002C0025 /* Supporting Files */,
@@ -178,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				BB5F752219DFF94C002C0025 /* ViewController.swift */,
+				BB46A56919E08BE0002A2CC5 /* SponsorPayApiController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -304,6 +311,7 @@
 				BB46A55C19E03204002A2CC5 /* NSString+Hashes.m in Sources */,
 				BB5F751F19DFF900002C0025 /* FormView.swift in Sources */,
 				BBB9D6D519DFFC3E00308729 /* extensionsViews.swift in Sources */,
+				BB46A56A19E08BE0002A2CC5 /* SponsorPayApiController.swift in Sources */,
 				BBB9D6D719E0057E00308729 /* OfferRequest.swift in Sources */,
 				BB5F74FC19DFF45E002C0025 /* AppDelegate.swift in Sources */,
 				BBB9D6D919E0091A00308729 /* constants.swift in Sources */,
@@ -320,7 +328,9 @@
 				BB46A55F19E034D4002A2CC5 /* NSString+Hashes.m in Sources */,
 				BB46A54C19E00DFB002A2CC5 /* constants.swift in Sources */,
 				BB46A54719E00D4D002A2CC5 /* offerRequestTests.swift in Sources */,
+				BB46A56B19E08BE2002A2CC5 /* SponsorPayApiController.swift in Sources */,
 				BB46A54819E00DC5002A2CC5 /* extensionsViews.swift in Sources */,
+				BB46A56D19E08DA8002A2CC5 /* apiControllerTests.swift in Sources */,
 				BB5F751219DFF45E002C0025 /* sponsorPayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

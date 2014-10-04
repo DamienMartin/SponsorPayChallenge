@@ -16,3 +16,7 @@ let defaultIp: String = "109.235.143.113"
 let defaultOfferTypes: String = "112"
 let defaultApiKey: String = "1c915e3b5d42d05136185030892fbb846c278927"
 let defaultPub0 = "campaign2"
+
+let apiDomainName: String = "api.sponsorpay.com"
+let apiUri: String = "/feed/v1"
+let apiOffersEndPoint: String = "/offers.json"

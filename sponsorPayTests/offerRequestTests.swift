@@ -53,7 +53,6 @@ class offerRequestTests: XCTestCase {
 		let requestParamsValue = self.request!.requestParamsValue(apiKey: false, hashValue: false)
 	
 		XCTAssertFalse(requestParamsValue.isEmpty, "requestParamsValue is Empty")
-		println("\(requestParamsValue)")
 		
 		let defaultValue = "appid=2070&format=json&ip=109.235.143.113&locale=DE&offer_types=112&uid=spiderman"
 		XCTAssert( (requestParamsValue == defaultValue), "requestParamsValue is wrong \(requestParamsValue) != \(defaultValue)")
@@ -75,6 +74,7 @@ class offerRequestTests: XCTestCase {
 		let haskKey = self.request!.authenticationHash();
 		let defaultValueWithHashKey = "\(defaultValue)&hashkey=\(haskKey)"
 		XCTAssert( (requestParamsValueWithHashKey == defaultValueWithHashKey), "requestParamsValue is wrong \(requestParamsValueWithHashKey) != \(defaultValueWithHashKey)")
+		println(requestParamsValueWithHashKey)
 		
 		// Test with APIKey and no HashKey
 		let testApiKey = "123456789"
