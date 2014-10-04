@@ -28,27 +28,28 @@ class SponsorPayApiController: NSObject {
 		return uri;
 	}
 	
-	func connect(query:String, completionHandler handler: ((NSDictionary!) -> Void)!) {
+	func uriForRequest(query: OfferRequest) -> String {
+		let uriString: String = self.uriForEndPoint(SponsorPayEndPoint.Offers)
+		let paramsString: String = query.requestParamsValue(apiKey: false, hashValue: true)
+		return "\(uriString)?\(paramsString)"
+	}
+	
+	func connect(query: OfferRequest, completionHandler handler: ((NSDictionary!) -> Void)!) {
 		
-		let queryString: String = self.uriForEndPoint(SponsorPayEndPoint.Offers);
+		var url: NSURL = NSURL(string: self.uriForRequest(query));
 		
-		NSLog("URL : \(queryString) ");
-		var url: NSURL = NSURL(string: queryString)
 		var request1: NSURLRequest = NSURLRequest(URL: url)
 		let queue:NSOperationQueue = NSOperationQueue()
-		
+
 		NSURLConnection.sendAsynchronousRequest(request1, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
-			/* Your code */
-			
 			var err: NSError
 			
-			//Todo : crash if nil !!!!
-			
 			var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
-			println("AsSynchronous\(jsonResult)")
+
+			println("Response \(jsonResult)")
+			
 			handler(jsonResult);
 		})
 	}
-
 	
 }

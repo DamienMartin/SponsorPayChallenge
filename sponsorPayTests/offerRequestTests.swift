@@ -74,7 +74,6 @@ class offerRequestTests: XCTestCase {
 		let haskKey = self.request!.authenticationHash();
 		let defaultValueWithHashKey = "\(defaultValue)&hashkey=\(haskKey)"
 		XCTAssert( (requestParamsValueWithHashKey == defaultValueWithHashKey), "requestParamsValue is wrong \(requestParamsValueWithHashKey) != \(defaultValueWithHashKey)")
-		println(requestParamsValueWithHashKey)
 		
 		// Test with APIKey and no HashKey
 		let testApiKey = "123456789"
