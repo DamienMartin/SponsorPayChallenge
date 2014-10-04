@@ -20,13 +20,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3L-Wk-4SH" customClass="OfferFormView" customModule="sponsorPay" customModuleProvider="target">
                                 <rect key="frame" x="16" y="139" width="568" height="261"/>
                                 <color key="backgroundColor" red="0.82650726010101017" green="0.82650726010101017" blue="0.82650726010101017" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="568" id="FEf-H6-HBm"/>
-                                    <constraint firstAttribute="height" constant="261" id="Oc8-fb-WvT"/>
-                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sponsor Pay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yV-6e-wea">
                                 <rect key="frame" x="16" y="55" width="568" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OIL-mR-Jc0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -34,13 +33,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="a3L-Wk-4SH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8Ma-mA-KQn"/>
-                            <constraint firstItem="a3L-Wk-4SH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="I5G-zg-Bzk"/>
-                            <constraint firstItem="a3L-Wk-4SH" firstAttribute="top" secondItem="5yV-6e-wea" secondAttribute="bottom" constant="34" id="aMY-Ok-8Mh"/>
-                            <constraint firstItem="a3L-Wk-4SH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="119" id="cNP-aC-x26"/>
-                            <constraint firstItem="5yV-6e-wea" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="fhP-3R-Xd4"/>
-                            <constraint firstItem="5yV-6e-wea" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mRa-17-ZBB"/>
-                            <constraint firstItem="5yV-6e-wea" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="nmm-2N-7xu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a3L-Wk-4SH" secondAttribute="bottom" constant="200" id="DLe-FJ-2aY"/>
+                            <constraint firstItem="a3L-Wk-4SH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dGZ-Ms-s3d"/>
+                            <constraint firstItem="5yV-6e-wea" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eBM-yp-kfr"/>
+                            <constraint firstItem="5yV-6e-wea" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="j5Y-G2-08Z"/>
+                            <constraint firstItem="5yV-6e-wea" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="lzA-rx-DPN"/>
+                            <constraint firstItem="a3L-Wk-4SH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="nib-Y7-VeZ"/>
+                            <constraint firstItem="a3L-Wk-4SH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="119" id="qXb-8b-C45"/>
                         </constraints>
                     </view>
                 </viewController>

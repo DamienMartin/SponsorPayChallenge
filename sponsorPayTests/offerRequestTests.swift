@@ -27,13 +27,33 @@ class offerRequestTests: XCTestCase {
 		
 		XCTAssertFalse( (paramsOrdered.count == 0), "No params")
 		
-    }
+		
+		var lastKey: String?
+		paramsOrdered.enumerateObjectsUsingBlock { (param: AnyObject!, index, stop) -> Void in
+			if let key = param.allKeys.first as? String {
+				if let value = param.objectForKey(key) as? String {
+					if lastKey != nil {
+						XCTAssert( (key > lastKey), " Not ordered \(key) > \(lastKey!)")
+					}
+					lastKey = key;
+				}
+				else {
+					XCTAssert(false, "no value for key on dictionnary param")
+				}
+				
+			}
+			else {
+				XCTAssert(false, "no key on dictionnary param")
+			}
+	
+		}
+	}
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
-    }
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measureBlock() {
+//            // Put the code you want to measure the time of here.
+//        }
+//    }
 
 }
