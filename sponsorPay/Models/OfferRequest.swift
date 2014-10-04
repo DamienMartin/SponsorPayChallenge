@@ -27,6 +27,27 @@ class OfferRequest: NSObject {
 		super.init();
 	}
 	
+	func requestParamsValue() -> String {
+		let paramsOrdered = self.orderedParams();
+		
+		var paramsValue: String = "";
+		paramsOrdered.enumerateObjectsUsingBlock { (object: AnyObject!, idx, stop) -> Void in
+			let param = object as NSDictionary;
+			
+			if !paramsValue.isEmpty {
+				paramsValue += "&"
+			}
+			
+			if let key = param.allKeys.first as? String {
+				if let value = param.objectForKey(key) as? String {
+					paramsValue += "\(key)=\(value)"
+				}
+			}
+		}
+		
+		return paramsValue;
+	}
+	
 	func orderedParams() -> NSArray {
 		var params: NSMutableDictionary = NSMutableDictionary();
 		params.setObject(self.format, forKey: "format");

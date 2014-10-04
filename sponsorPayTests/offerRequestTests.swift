@@ -11,9 +11,12 @@ import XCTest
 
 class offerRequestTests: XCTestCase {
 	
+	var request: OfferRequest?
+	
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+		request = OfferRequest();
+		
     }
     
     override func tearDown() {
@@ -21,12 +24,10 @@ class offerRequestTests: XCTestCase {
         super.tearDown()
     }
 
-    func testOrderedParams() {
-		var request: OfferRequest = OfferRequest();
-		let paramsOrdered: NSArray = request.orderedParams()
+    func testDefaultOrderedParams() {
+		let paramsOrdered: NSArray = self.request!.orderedParams()
 		
 		XCTAssertFalse( (paramsOrdered.count == 0), "No params")
-		
 		
 		var lastKey: String?
 		paramsOrdered.enumerateObjectsUsingBlock { (param: AnyObject!, index, stop) -> Void in
@@ -45,15 +46,19 @@ class offerRequestTests: XCTestCase {
 			else {
 				XCTAssert(false, "no key on dictionnary param")
 			}
-	
 		}
 	}
-
-//    func testPerformanceExample() {
-//        // This is an example of a performance test case.
-//        self.measureBlock() {
-//            // Put the code you want to measure the time of here.
-//        }
-//    }
+	
+	func testDefaultRequestParamsValue() {
+		let requestParamsValue = self.request!.requestParamsValue();
+	
+		XCTAssertFalse(requestParamsValue.isEmpty, "requestParamsValue is Empty")
+		
+		let defaultValue = "appid=2070&apple_idfa=TEST&format=json&ip=109.235.143.113&locale=DE&offer_types=112&uid=spiderman"
+		XCTAssert( (requestParamsValue == defaultValue), "requestParamsValue is Empty")
+		
+		
+		
+	}
 
 }
