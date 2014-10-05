@@ -20,7 +20,7 @@ class offerTests: XCTestCase {
         super.tearDown()
     }
 
-	func parsingTest() {
+	func testParsing() {
 		
 		let dictionaryOk = ["title":"title1","teaser":"teaser1","payout":123,"thumbnail":["lowres":"lowres1","hires":"hires1"]]
 		let offer = Offer(dictionary: dictionaryOk);

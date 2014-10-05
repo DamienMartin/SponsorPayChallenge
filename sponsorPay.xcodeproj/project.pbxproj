@@ -175,8 +175,8 @@
 				BB46A56C19E08DA8002A2CC5 /* apiControllerTests.swift */,
 				BB46A54619E00D4D002A2CC5 /* offerRequestTests.swift */,
 				BB5F751119DFF45E002C0025 /* sponsorPayTests.swift */,
-				BB5F750F19DFF45E002C0025 /* Supporting Files */,
 				BB5FBC6719E15CCA00FDC7D4 /* offerTests.swift */,
+				BB5F750F19DFF45E002C0025 /* Supporting Files */,
 			);
 			path = sponsorPayTests;
 			sourceTree = "<group>";
