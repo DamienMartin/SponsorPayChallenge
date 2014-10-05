@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, OfferFormViewDelegate {
+class FormViewController: UIViewController, OfferFormViewDelegate {
 
 	@IBOutlet var form: OfferFormView?
 	
