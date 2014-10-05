@@ -50,7 +50,6 @@ class apiControllerTests: XCTestCase {
 			
 		})
 
-		
 		waitForExpectationsWithTimeout(20, handler: { error in
 		})
 		
@@ -74,5 +73,26 @@ class apiControllerTests: XCTestCase {
 		})
 	}
 	
+	func testWrongQueryAsynchronousCall() {
+		let expectation = expectationWithDescription("Sponsor Pay header hash")
+		
+		request!.fixedTimestamp = "123456"
+		request!.apiKey = ""
+		
+		self.apiController?.getOffers(self.request!, completionHandler: { (results, error) -> Void in
+			
+			expectation.fulfill()
+			
+			XCTAssertNil(results, "data should be nil")
+			XCTAssertNotNil(error, "error should not be nil")
+			
+			XCTAssertEqual(error!, "Incorrect query : Missing params", "Error message isn't correct")
+		})
+		
+		
+		waitForExpectationsWithTimeout(20, handler: { error in
+		})
+	}
+
 
 }

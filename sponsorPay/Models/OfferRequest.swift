@@ -114,4 +114,18 @@ class OfferRequest: NSObject {
 		return valueToHash.sha1.lowercaseString;
 	}
 	
+	/// verify content
+	func canSendRequest() -> (Bool, String?) {
+		if self.uid?.isEmpty == true  {
+			return (false, "UID is mandatroy")
+		}
+		if self.appid?.isEmpty == true {
+			return (false, "AppId is mandatroy")
+		}
+		if self.apiKey.isEmpty == true {
+			return (false, "APIKey is mandatroy")
+		}
+		return (true, nil);
+	}
+	
 }

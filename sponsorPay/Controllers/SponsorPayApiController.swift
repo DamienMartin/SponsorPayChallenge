@@ -38,30 +38,36 @@ class SponsorPayApiController: NSObject {
 	
 	func getOffers(query: OfferRequest, completionHandler handler: (([Offer]?, error: NSString?) -> Void)!) {
 		
-		var url: NSURL = NSURL(string: self.uriForRequest(query));
-		
-		var request1: NSURLRequest = NSURLRequest(URL: url)
-		let queue:NSOperationQueue = NSOperationQueue()
-
-		NSURLConnection.sendAsynchronousRequest(request1, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
-			var err: NSError
+		let (canSend, errorMessage: String?) = query.canSendRequest();
+		if canSend == true {
 			
-			var errorMessage: String?
-			var offers: [Offer]?
+			var url: NSURL = NSURL(string: self.uriForRequest(query));
 			
-			let offersResponse: OffersResponse = OffersResponse(urlResponse: response as NSHTTPURLResponse, responseData: data)
-			if offersResponse.isResponseCorrect() == true {
-				offers = offersResponse.offersInResponse();
-			}
-			else {
-				errorMessage = "Invalid server response"
-			}
+			var request1: NSURLRequest = NSURLRequest(URL: url)
+			let queue:NSOperationQueue = NSOperationQueue()
 			
-			
-
+			NSURLConnection.sendAsynchronousRequest(request1, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+				var err: NSError
+				
+				var errorMessage: String?
+				var offers: [Offer]?
+				
+				let offersResponse: OffersResponse = OffersResponse(urlResponse: response as NSHTTPURLResponse, responseData: data)
+				if offersResponse.isResponseCorrect() == true {
+					offers = offersResponse.offersInResponse();
+				}
+				else {
+					errorMessage = "Invalid server response"
+				}
+				NSOperationQueue.mainQueue().addOperationWithBlock() {
+					handler(offers, error: errorMessage);
+				}
+			})
+		}
+		else {
 			NSOperationQueue.mainQueue().addOperationWithBlock() {
-				handler(offers, error: errorMessage);
+				handler(nil, error: "Incorrect query : Missing params");
 			}
-		})
+		}
 	}
 }

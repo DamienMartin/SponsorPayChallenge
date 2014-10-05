@@ -82,8 +82,14 @@ class OfferFormView: UIView {
 		request.apiKey = self.apiKeyTextField.text
 		request.pub0 = self.pub0TextField.text
 		
-		if delegate != nil {
-			delegate?.formDidValidate(request)
+		let (canSend, errorMessage: String?) = request.canSendRequest();
+		if canSend == true {
+			if delegate != nil {
+				delegate?.formDidValidate(request)
+			}
+		}
+		else {
+			UIAlertView(title: "Error", message: errorMessage, delegate: nil, cancelButtonTitle: "Ok").show()
 		}
 	}
 	
