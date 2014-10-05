@@ -10,6 +10,7 @@ import UIKit
 
 class FormViewController: UIViewController, OfferFormViewDelegate {
 
+	@IBOutlet var contentView: UIScrollView?
 	@IBOutlet var form: OfferFormView?
 	
 	required init(coder aDecoder: NSCoder) {
@@ -22,9 +23,10 @@ class FormViewController: UIViewController, OfferFormViewDelegate {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
 		self.navigationController?.hidesBarsWhenKeyboardAppears = true;
 		self.navigationController?.hidesBarsWhenVerticallyCompact = true;
-		form?.delegate = self
+		form?.formDelegate = self
 	}
 
 	override func didReceiveMemoryWarning() {

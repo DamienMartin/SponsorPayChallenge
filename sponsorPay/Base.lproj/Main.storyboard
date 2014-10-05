@@ -33,36 +33,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3L-Wk-4SH" customClass="OfferFormView" customModule="sponsorPay" customModuleProvider="target">
-                                <rect key="frame" x="16" y="183" width="568" height="397"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
-                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BigFyberIcon" translatesAutoresizingMaskIntoConstraints="NO" id="qFn-m7-7rm">
                                 <rect key="frame" x="250" y="75" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="2Pc-4i-sgq"/>
+                                    <constraint firstAttribute="height" constant="100" id="YCH-ia-JcQ"/>
                                     <constraint firstAttribute="width" constant="100" id="cL7-iM-Uax"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="YCH-ia-JcQ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="2Pc-4i-sgq"/>
+                                        <include reference="YCH-ia-JcQ"/>
+                                    </mask>
+                                </variation>
                             </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fwN-1G-bqM" customClass="OfferFormView" customModule="sponsorPay" customModuleProvider="target">
+                                <rect key="frame" x="16" y="183" width="568" height="397"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="16" y="183" width="368" height="597"/>
+                                </variation>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a3L-Wk-4SH" secondAttribute="bottom" constant="20" id="IE9-z6-gje"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fwN-1G-bqM" secondAttribute="bottom" constant="20" id="3gM-EI-AuJ"/>
+                            <constraint firstItem="fwN-1G-bqM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="K4K-10-hYj"/>
+                            <constraint firstItem="fwN-1G-bqM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="N9x-9u-uM3"/>
+                            <constraint firstItem="fwN-1G-bqM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="11" id="RG6-YR-ns5"/>
                             <constraint firstAttribute="centerX" secondItem="qFn-m7-7rm" secondAttribute="centerX" id="cwh-5d-sP4"/>
-                            <constraint firstItem="a3L-Wk-4SH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dGZ-Ms-s3d"/>
-                            <constraint firstItem="a3L-Wk-4SH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="nib-Y7-VeZ"/>
+                            <constraint firstItem="fwN-1G-bqM" firstAttribute="top" secondItem="qFn-m7-7rm" secondAttribute="bottom" constant="8" id="isc-WE-lYD"/>
                             <constraint firstItem="qFn-m7-7rm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="11" id="pN2-35-iBz"/>
-                            <constraint firstItem="a3L-Wk-4SH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="119" id="qXb-8b-C45"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RG6-YR-ns5"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="RG6-YR-ns5"/>
+                                <exclude reference="isc-WE-lYD"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular"/>
+                        <variation key="heightClass=compact-widthClass=compact"/>
+                        <variation key="heightClass=compact-widthClass=regular"/>
                     </view>
                     <navigationItem key="navigationItem" id="bSc-kh-O0u"/>
                     <connections>
-                        <outlet property="form" destination="a3L-Wk-4SH" id="s54-H3-T2l"/>
+                        <outlet property="form" destination="fwN-1G-bqM" id="epK-YN-Z8h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="779" y="-79"/>
+            <point key="canvasLocation" x="779" y="-79.5"/>
         </scene>
     </scenes>
     <resources>
