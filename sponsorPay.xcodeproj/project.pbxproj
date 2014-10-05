@@ -34,6 +34,11 @@
 		BB5FBC6519E1561000FDC7D4 /* OffersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5FBC6019E1530E00FDC7D4 /* OffersResponse.swift */; };
 		BB5FBC6619E1561300FDC7D4 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5FBC6219E1531B00FDC7D4 /* Offer.swift */; };
 		BB5FBC6819E15CCA00FDC7D4 /* offerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5FBC6719E15CCA00FDC7D4 /* offerTests.swift */; };
+		BB5FBC6A19E16F2E00FDC7D4 /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5FBC6919E16F2E00FDC7D4 /* OffersViewController.swift */; };
+		BB5FBC6B19E1706700FDC7D4 /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5FBC6919E16F2E00FDC7D4 /* OffersViewController.swift */; };
+		BB5FBC6E19E1729D00FDC7D4 /* OfferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5FBC6C19E1729D00FDC7D4 /* OfferTableViewCell.swift */; };
+		BB5FBC6F19E1729D00FDC7D4 /* OfferTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB5FBC6D19E1729D00FDC7D4 /* OfferTableViewCell.xib */; };
+		BB5FBC7019E172A500FDC7D4 /* OfferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5FBC6C19E1729D00FDC7D4 /* OfferTableViewCell.swift */; };
 		BBB9D6D519DFFC3E00308729 /* extensionsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB9D6D419DFFC3E00308729 /* extensionsViews.swift */; };
 		BBB9D6D719E0057E00308729 /* OfferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB9D6D619E0057E00308729 /* OfferRequest.swift */; };
 		BBB9D6D919E0091A00308729 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB9D6D819E0091A00308729 /* constants.swift */; };
@@ -72,6 +77,9 @@
 		BB5FBC6019E1530E00FDC7D4 /* OffersResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersResponse.swift; sourceTree = "<group>"; };
 		BB5FBC6219E1531B00FDC7D4 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		BB5FBC6719E15CCA00FDC7D4 /* offerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = offerTests.swift; sourceTree = "<group>"; };
+		BB5FBC6919E16F2E00FDC7D4 /* OffersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersViewController.swift; sourceTree = "<group>"; };
+		BB5FBC6C19E1729D00FDC7D4 /* OfferTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferTableViewCell.swift; sourceTree = "<group>"; };
+		BB5FBC6D19E1729D00FDC7D4 /* OfferTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OfferTableViewCell.xib; sourceTree = "<group>"; };
 		BBB9D6D419DFFC3E00308729 /* extensionsViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensionsViews.swift; sourceTree = "<group>"; };
 		BBB9D6D619E0057E00308729 /* OfferRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferRequest.swift; sourceTree = "<group>"; };
 		BBB9D6D819E0091A00308729 /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
@@ -185,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				BB5F751E19DFF900002C0025 /* OfferFormView.swift */,
+				BB5FBC6C19E1729D00FDC7D4 /* OfferTableViewCell.swift */,
+				BB5FBC6D19E1729D00FDC7D4 /* OfferTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,7 +202,7 @@
 		BB5F752019DFF92B002C0025 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BB5F752219DFF94C002C0025 /* ViewController.swift */,
+				BB6B945B19E17CA8000AE9D8 /* Views controllers */,
 				BB46A56919E08BE0002A2CC5 /* SponsorPayApiController.swift */,
 			);
 			path = Controllers;
@@ -214,6 +224,15 @@
 				BB5FBC6019E1530E00FDC7D4 /* OffersResponse.swift */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		BB6B945B19E17CA8000AE9D8 /* Views controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BB5F752219DFF94C002C0025 /* ViewController.swift */,
+				BB5FBC6919E16F2E00FDC7D4 /* OffersViewController.swift */,
+			);
+			name = "Views controllers";
 			sourceTree = "<group>";
 		};
 		BBB9D6D319DFFC1100308729 /* Extensions */ = {
@@ -306,6 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB5FBC6F19E1729D00FDC7D4 /* OfferTableViewCell.xib in Resources */,
 				BB5F750119DFF45E002C0025 /* Main.storyboard in Resources */,
 				BB5F750619DFF45E002C0025 /* LaunchScreen.xib in Resources */,
 				BB5F750319DFF45E002C0025 /* Images.xcassets in Resources */,
@@ -326,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB5FBC6E19E1729D00FDC7D4 /* OfferTableViewCell.swift in Sources */,
 				BB5F752319DFF94C002C0025 /* ViewController.swift in Sources */,
 				BB46A55C19E03204002A2CC5 /* NSString+Hashes.m in Sources */,
 				BB5F751F19DFF900002C0025 /* OfferFormView.swift in Sources */,
@@ -336,6 +357,7 @@
 				BBB9D6D719E0057E00308729 /* OfferRequest.swift in Sources */,
 				BB5F74FC19DFF45E002C0025 /* AppDelegate.swift in Sources */,
 				BBB9D6D919E0091A00308729 /* constants.swift in Sources */,
+				BB5FBC6A19E16F2E00FDC7D4 /* OffersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +370,8 @@
 				BB46A54A19E00DCA002A2CC5 /* ViewController.swift in Sources */,
 				BB46A54919E00DC7002A2CC5 /* OfferRequest.swift in Sources */,
 				BB5FBC6519E1561000FDC7D4 /* OffersResponse.swift in Sources */,
+				BB5FBC6B19E1706700FDC7D4 /* OffersViewController.swift in Sources */,
+				BB5FBC7019E172A500FDC7D4 /* OfferTableViewCell.swift in Sources */,
 				BB46A55F19E034D4002A2CC5 /* NSString+Hashes.m in Sources */,
 				BB5FBC6819E15CCA00FDC7D4 /* offerTests.swift in Sources */,
 				BB46A54C19E00DFB002A2CC5 /* constants.swift in Sources */,

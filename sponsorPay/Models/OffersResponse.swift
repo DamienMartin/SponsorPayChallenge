@@ -45,6 +45,9 @@ class OffersResponse: NSObject {
 	
 	func offersInResponse() -> [Offer]? {
 		let jsonResult = NSJSONSerialization.JSONObjectWithData(self.data, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary
+		
+		println("\(jsonResult)")
+		
 		let dictOffers: NSArray? = jsonResult?.objectForKey("offers") as? NSArray;
 		
 		if dictOffers != nil {

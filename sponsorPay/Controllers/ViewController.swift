@@ -40,7 +40,15 @@ class ViewController: UIViewController, OfferFormViewDelegate {
 				let alert: UIAlertView = UIAlertView(title: "Error", message: error!, delegate: nil, cancelButtonTitle: "Ok");
 				alert.show();
 			}
-			println("resultDictionnay")
+			else {
+				if result!.count == 0 {
+					
+				}
+				else {
+					let vc: OffersViewController = OffersViewController(offers: result!)
+					self.navigationController?.pushViewController(vc, animated: true)
+				}
+			}
 		})
 	}
 	
