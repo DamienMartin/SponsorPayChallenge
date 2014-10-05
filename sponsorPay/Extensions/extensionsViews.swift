@@ -31,6 +31,8 @@ extension UITextField {
 		self.clearButtonMode = UITextFieldViewMode.WhileEditing
 		self.contentVerticalAlignment = UIControlContentVerticalAlignment.Center
 		self.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
+
+		self.isAccessibilityElement = true;
 		
 		parentView.addSubview(self);
 	}

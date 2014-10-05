@@ -63,19 +63,25 @@ class OfferFormView: UIScrollView {
 		
 		var yPosition: Float = offsetY
 		self.uidTextField.formateTextField(self, horizontalOffset: offsetX, verticalPosition: yPosition, placeholder: "UID value")
+		self.uidTextField.accessibilityLabel = "uidTextField"
 		
 		yPosition += Float(self.uidTextField.frame.size.height) + offsetY
 		self.appIdTextField.formateTextField(self, horizontalOffset: offsetX, verticalPosition: yPosition, placeholder: "appID value")
+		self.appIdTextField.accessibilityLabel = "appIdTextField"
 		
 		yPosition += Float(self.appIdTextField.frame.size.height) + offsetY
 		self.apiKeyTextField.formateTextField(self, horizontalOffset: offsetX, verticalPosition: yPosition, placeholder: "apiKey value")
+		self.apiKeyTextField.accessibilityLabel = "apiKeyTextField"
 		
 		yPosition += Float(self.apiKeyTextField.frame.size.height) + offsetY
 		self.pub0TextField.formateTextField(self, horizontalOffset: offsetX, verticalPosition: yPosition, placeholder: "pub0 value")
+		self.pub0TextField.accessibilityLabel = "pub0TextField"
 		
 		// Validate button
 		yPosition += Float(self.pub0TextField.frame.size.height) + offsetY
 		self.validateButton.frame = CGRectMake(CGFloat(offsetX), CGFloat(yPosition), self.frame.size.width - (2 * CGFloat(offsetX) ), 45)
+		self.validateButton.isAccessibilityElement = true
+		self.validateButton.accessibilityLabel = "validateButton"
 		self.validateButton.backgroundColor = UIColor.blueColor()
 		validateButton.autoresizingMask = UIViewAutoresizing.FlexibleWidth;
 		self.validateButton.addTarget(self, action: Selector("validateForm") , forControlEvents: UIControlEvents.TouchUpInside)
