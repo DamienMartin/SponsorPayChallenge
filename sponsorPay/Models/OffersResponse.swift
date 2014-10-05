@@ -45,7 +45,22 @@ class OffersResponse: NSObject {
 	
 	func offersInResponse() -> [Offer]? {
 		let jsonResult = NSJSONSerialization.JSONObjectWithData(self.data, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary
-		return [Offer()]
+		let dictOffers: NSArray? = jsonResult?.objectForKey("offers") as? NSArray;
+		
+		if dictOffers != nil {
+			
+			var offers: [Offer] = []
+			
+			dictOffers?.enumerateObjectsUsingBlock({ (object , idx, stop) -> Void in
+				if let dictOffer = object as? NSDictionary {
+					let offer = Offer(dictionary: dictOffer)
+					offers.append(offer);
+				}
+			})
+			
+			return offers
+		}
+		return nil
 	}
 
 	
