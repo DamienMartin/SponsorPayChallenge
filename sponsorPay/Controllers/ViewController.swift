@@ -22,7 +22,8 @@ class ViewController: UIViewController, OfferFormViewDelegate {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+		self.navigationController?.hidesBarsWhenKeyboardAppears = true;
+		self.navigationController?.hidesBarsWhenVerticallyCompact = true;
 		form?.delegate = self
 	}
 
