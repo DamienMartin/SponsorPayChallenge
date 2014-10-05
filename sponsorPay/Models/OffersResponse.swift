@@ -22,7 +22,7 @@ class OffersResponse: NSObject {
 		super.init()
 	}
 	
-	init(urlResponse response:NSHTTPURLResponse, responseData data:NSData) {
+	init(urlResponse response:NSHTTPURLResponse!, responseData data:NSData!) {
 		self.urlResponse = response;
 		self.data = data;
 		super.init()

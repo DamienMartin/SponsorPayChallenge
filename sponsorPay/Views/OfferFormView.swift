@@ -22,6 +22,8 @@ class OfferFormView: UIView {
 	// form validator
 	var validateButton: UIButton = UIButton();
 	
+	
+	var loader: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.White);
 	var delegate: OfferFormViewDelegate?
 	
 	override init(frame: CGRect) {
@@ -57,6 +59,7 @@ class OfferFormView: UIView {
 		validateButton.autoresizingMask = UIViewAutoresizing.FlexibleWidth;
 		self.validateButton.addTarget(self, action: Selector("validateForm") , forControlEvents: UIControlEvents.TouchUpInside)
 		self.validateButton.setTitle("Validate", forState: UIControlState.Normal)
+		self.validateButton.setTitle("", forState: UIControlState.Disabled)
 		self.validateButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Highlighted)
 		self.validateButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
 		self.addSubview(validateButton);
@@ -89,10 +92,14 @@ class OfferFormView: UIView {
 	}
 	
 	func disable() {
-		self.validateButton.enabled = false;
+		self.validateButton.enabled = false
+		loader.startAnimating()
+		loader.frame = self.validateButton.bounds
+		self.validateButton.addSubview(loader)
 	}
 	
 	func enable() {
+		loader.removeFromSuperview()
 		self.validateButton.enabled = true;
 	}
 	
