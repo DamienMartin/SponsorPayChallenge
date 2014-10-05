@@ -80,6 +80,9 @@
                                 <exclude reference="isc-WE-lYD"/>
                             </mask>
                         </variation>
+                        <variation key="widthClass=regular"/>
+                        <variation key="heightClass=compact-widthClass=compact"/>
+                        <variation key="heightClass=compact-widthClass=regular"/>
                     </view>
                     <navigationItem key="navigationItem" id="bSc-kh-O0u"/>
                     <connections>

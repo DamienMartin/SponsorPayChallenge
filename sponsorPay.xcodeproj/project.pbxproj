@@ -10,7 +10,7 @@
 		BB46A54719E00D4D002A2CC5 /* offerRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB46A54619E00D4D002A2CC5 /* offerRequestTests.swift */; };
 		BB46A54819E00DC5002A2CC5 /* extensionsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB9D6D419DFFC3E00308729 /* extensionsViews.swift */; };
 		BB46A54919E00DC7002A2CC5 /* OfferRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB9D6D619E0057E00308729 /* OfferRequest.swift */; };
-		BB46A54A19E00DCA002A2CC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5F752219DFF94C002C0025 /* ViewController.swift */; };
+		BB46A54A19E00DCA002A2CC5 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5F752219DFF94C002C0025 /* FormViewController.swift */; };
 		BB46A54B19E00DCE002A2CC5 /* OfferFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5F751E19DFF900002C0025 /* OfferFormView.swift */; };
 		BB46A54C19E00DFB002A2CC5 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB9D6D819E0091A00308729 /* constants.swift */; };
 		BB46A55C19E03204002A2CC5 /* NSString+Hashes.m in Sources */ = {isa = PBXBuildFile; fileRef = BB46A55B19E03204002A2CC5 /* NSString+Hashes.m */; };
@@ -28,7 +28,7 @@
 		BB5F750619DFF45E002C0025 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB5F750419DFF45E002C0025 /* LaunchScreen.xib */; };
 		BB5F751219DFF45E002C0025 /* sponsorPayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5F751119DFF45E002C0025 /* sponsorPayTests.swift */; };
 		BB5F751F19DFF900002C0025 /* OfferFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5F751E19DFF900002C0025 /* OfferFormView.swift */; };
-		BB5F752319DFF94C002C0025 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5F752219DFF94C002C0025 /* ViewController.swift */; };
+		BB5F752319DFF94C002C0025 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5F752219DFF94C002C0025 /* FormViewController.swift */; };
 		BB5FBC6119E1530E00FDC7D4 /* OffersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5FBC6019E1530E00FDC7D4 /* OffersResponse.swift */; };
 		BB5FBC6319E1531B00FDC7D4 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5FBC6219E1531B00FDC7D4 /* Offer.swift */; };
 		BB5FBC6519E1561000FDC7D4 /* OffersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5FBC6019E1530E00FDC7D4 /* OffersResponse.swift */; };
@@ -73,7 +73,7 @@
 		BB5F751019DFF45E002C0025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB5F751119DFF45E002C0025 /* sponsorPayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sponsorPayTests.swift; sourceTree = "<group>"; };
 		BB5F751E19DFF900002C0025 /* OfferFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferFormView.swift; sourceTree = "<group>"; };
-		BB5F752219DFF94C002C0025 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BB5F752219DFF94C002C0025 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		BB5FBC6019E1530E00FDC7D4 /* OffersResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersResponse.swift; sourceTree = "<group>"; };
 		BB5FBC6219E1531B00FDC7D4 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		BB5FBC6719E15CCA00FDC7D4 /* offerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = offerTests.swift; sourceTree = "<group>"; };
@@ -229,7 +229,7 @@
 		BB6B945B19E17CA8000AE9D8 /* Views controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BB5F752219DFF94C002C0025 /* ViewController.swift */,
+				BB5F752219DFF94C002C0025 /* FormViewController.swift */,
 				BB5FBC6919E16F2E00FDC7D4 /* OffersViewController.swift */,
 			);
 			name = "Views controllers";
@@ -347,7 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB5FBC6E19E1729D00FDC7D4 /* OfferTableViewCell.swift in Sources */,
-				BB5F752319DFF94C002C0025 /* ViewController.swift in Sources */,
+				BB5F752319DFF94C002C0025 /* FormViewController.swift in Sources */,
 				BB46A55C19E03204002A2CC5 /* NSString+Hashes.m in Sources */,
 				BB5F751F19DFF900002C0025 /* OfferFormView.swift in Sources */,
 				BBB9D6D519DFFC3E00308729 /* extensionsViews.swift in Sources */,
@@ -367,7 +367,7 @@
 			files = (
 				BB5FBC6619E1561300FDC7D4 /* Offer.swift in Sources */,
 				BB46A54B19E00DCE002A2CC5 /* OfferFormView.swift in Sources */,
-				BB46A54A19E00DCA002A2CC5 /* ViewController.swift in Sources */,
+				BB46A54A19E00DCA002A2CC5 /* FormViewController.swift in Sources */,
 				BB46A54919E00DC7002A2CC5 /* OfferRequest.swift in Sources */,
 				BB5FBC6519E1561000FDC7D4 /* OffersResponse.swift in Sources */,
 				BB5FBC6B19E1706700FDC7D4 /* OffersViewController.swift in Sources */,
