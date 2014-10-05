@@ -122,21 +122,25 @@ class offerRequestTests: XCTestCase {
 		let apiKey = request!.apiKey
 		let uid = request!.uid
 		
+		// Can send
 		var (canSend, errorMessage) = request!.canSendRequest();
 		XCTAssert( canSend == true, "canSend should be true")
 		XCTAssertNil( errorMessage, "errorMessage should be nil")
 		
+		// Missing apiKey
 		request!.apiKey = "";
 		(canSend, errorMessage) = request!.canSendRequest();
 		XCTAssert( canSend == false, "canSend should be true")
 		XCTAssertNotNil( errorMessage, "errorMessage shouldn't be nil")
 		
+		// Missing uid
 		request!.apiKey = apiKey;
 		request!.uid = nil;
 		(canSend, errorMessage) = request!.canSendRequest();
 		XCTAssert( canSend == false, "canSend should be true")
 		XCTAssertNotNil( errorMessage, "errorMessage shouldn't be nil")
 		
+		// Missing appId
 		request!.apiKey = apiKey;
 		request!.uid = nil;
 		(canSend, errorMessage) = request!.canSendRequest();

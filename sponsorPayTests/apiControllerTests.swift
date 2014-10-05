@@ -39,6 +39,7 @@ class apiControllerTests: XCTestCase {
 		
 	}
 
+	/// Functional test of a correct request
 	func testCorrectAsynchronousCall() {
 		let expectation = expectationWithDescription("Sponsor Pay header hash")
 		
@@ -55,8 +56,9 @@ class apiControllerTests: XCTestCase {
 		
 	}
 	
+	/// Functional test of a wrong request
 	func testWrongAsynchronousCall() {
-		let expectation = expectationWithDescription("Sponsor Pay header hash")
+		let expectation = expectationWithDescription("Get error response")
 		
 		request!.fixedTimestamp = "123456"
 		
@@ -73,8 +75,9 @@ class apiControllerTests: XCTestCase {
 		})
 	}
 	
+	/// Functional test of a wrong query request
 	func testWrongQueryAsynchronousCall() {
-		let expectation = expectationWithDescription("Sponsor Pay header hash")
+		let expectation = expectationWithDescription("Wrong query resquest")
 		
 		request!.fixedTimestamp = "123456"
 		request!.apiKey = ""
