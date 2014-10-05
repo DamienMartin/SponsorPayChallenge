@@ -34,6 +34,8 @@ class ViewController: UIViewController, OfferFormViewDelegate {
 
 	// MARK: - OfferFormViewDelegate
 	func formDidValidate(offerRequest: OfferRequest) {
+		self.form?.disable();
+		
 		let apiController: SponsorPayApiController = SponsorPayApiController();
 		apiController.getOffers(offerRequest, completionHandler: { (result, error) -> Void in
 			if error != nil {
@@ -49,6 +51,7 @@ class ViewController: UIViewController, OfferFormViewDelegate {
 					self.navigationController?.pushViewController(vc, animated: true)
 				}
 			}
+			self.form?.enable();
 		})
 	}
 	

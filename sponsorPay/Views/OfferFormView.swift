@@ -88,4 +88,12 @@ class OfferFormView: UIView {
 		return OfferRequest();
 	}
 	
+	func disable() {
+		self.validateButton.enabled = false;
+	}
+	
+	func enable() {
+		self.validateButton.enabled = true;
+	}
+	
 }
