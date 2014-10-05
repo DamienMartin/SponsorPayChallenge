@@ -1,5 +1,8 @@
 # Created by https://www.gitignore.io
 
+# Automation trace
+*.run.zip
+
 ### Swift ###
 # Xcode
 #

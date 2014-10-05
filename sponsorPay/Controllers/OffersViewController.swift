@@ -36,6 +36,8 @@ class OffersViewController: UITableViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 
+		self.title = "Offers"
+		
 		// Define xib for cell
 		var nipName = UINib(nibName: "OfferTableViewCell", bundle:nil)
 		self.tableView.registerNib(nipName, forCellReuseIdentifier: "offer")
