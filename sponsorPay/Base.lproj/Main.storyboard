@@ -33,12 +33,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3L-Wk-4SH" customClass="OfferFormView" customModule="sponsorPay" customModuleProvider="target">
-                                <rect key="frame" x="16" y="139" width="568" height="261"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3L-Wk-4SH" customClass="OfferFormView" customModule="sponsorPay" customModuleProvider="target">
+                                <rect key="frame" x="16" y="183" width="568" height="397"/>
                                 <color key="backgroundColor" red="0.82650726010101017" green="0.82650726010101017" blue="0.82650726010101017" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sponsor Pay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yV-6e-wea">
-                                <rect key="frame" x="16" y="55" width="568" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sponsor Pay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yV-6e-wea">
+                                <rect key="frame" x="16" y="99" width="568" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="OIL-mR-Jc0"/>
                                 </constraints>
@@ -49,7 +49,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a3L-Wk-4SH" secondAttribute="bottom" constant="200" id="DLe-FJ-2aY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a3L-Wk-4SH" secondAttribute="bottom" constant="20" id="IE9-z6-gje"/>
                             <constraint firstItem="a3L-Wk-4SH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dGZ-Ms-s3d"/>
                             <constraint firstItem="5yV-6e-wea" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eBM-yp-kfr"/>
                             <constraint firstItem="5yV-6e-wea" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="j5Y-G2-08Z"/>
