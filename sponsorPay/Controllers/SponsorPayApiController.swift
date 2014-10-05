@@ -36,7 +36,7 @@ class SponsorPayApiController: NSObject {
 		return uriForRequest
 	}
 	
-	func getOffers(query: OfferRequest, completionHandler handler: ((NSDictionary!, error: NSString?) -> Void)!) {
+	func getOffers(query: OfferRequest, completionHandler handler: (([Offer]?, error: NSString?) -> Void)!) {
 		
 		var url: NSURL = NSURL(string: self.uriForRequest(query));
 		
@@ -47,36 +47,21 @@ class SponsorPayApiController: NSObject {
 			var err: NSError
 			
 			var errorMessage: String?
-			var jsonResult: NSDictionary?
+			var offers: [Offer]?
 			
-			// Get hash header response
-			if self.checkResponse(data, response: response) == true {
-				jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary
+			let offersResponse: OffersResponse = OffersResponse(urlResponse: response as NSHTTPURLResponse, responseData: data)
+			if offersResponse.isResponseCorrect() == true {
+				offers = offersResponse.offersInResponse();
 			}
 			else {
-				errorMessage = "invalid server response ..."
+				errorMessage = "Invalid server response"
 			}
+			
+			
 
 			NSOperationQueue.mainQueue().addOperationWithBlock() {
-				handler(jsonResult, error: errorMessage);
+				handler(offers, error: errorMessage);
 			}
 		})
 	}
-	
-	func checkResponse(data: NSData!, response:NSURLResponse) -> Bool {
-		let responseHttp = response as NSHTTPURLResponse
-		if let responseHash: String = responseHttp.allHeaderFields[headerHTTPResponseHash] as? NSString {
-			
-			// Check if is correct hash
-			let responseString = NSString(data: data, encoding: NSUTF8StringEncoding)
-			let valueToHash = "\(responseString)\(defaultApiKey)" as NSString
-			let bodyHash = valueToHash.sha1
-			
-			if bodyHash == responseHash {
-				return true
-			}
-		}
-		return false
-	}
-	
 }
