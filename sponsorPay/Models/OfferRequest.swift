@@ -116,10 +116,10 @@ class OfferRequest: NSObject {
 	
 	/// verify content
 	func canSendRequest() -> (Bool, String?) {
-		if self.uid?.isEmpty == true  {
+		if self.uid == nil || self.uid?.isEmpty == true  {
 			return (false, "UID is mandatroy")
 		}
-		if self.appid?.isEmpty == true {
+		if self.appid == nil || self.appid?.isEmpty == true {
 			return (false, "AppId is mandatroy")
 		}
 		if self.apiKey.isEmpty == true {

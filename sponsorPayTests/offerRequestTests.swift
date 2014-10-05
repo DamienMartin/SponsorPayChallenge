@@ -116,5 +116,40 @@ class offerRequestTests: XCTestCase {
 		let newHash = self.request!.authenticationHash()
 		XCTAssert( (hash != newHash), "Hash don't change : \(hash) != \(newHash)" )
 	}
+	
+	func testCanSendMethod() {
+		
+		let apiKey = request!.apiKey
+		let uid = request!.uid
+		
+		var (canSend, errorMessage) = request!.canSendRequest();
+		XCTAssert( canSend == true, "canSend should be true")
+		XCTAssertNil( errorMessage, "errorMessage should be nil")
+		
+		request!.apiKey = "";
+		(canSend, errorMessage) = request!.canSendRequest();
+		XCTAssert( canSend == false, "canSend should be true")
+		XCTAssertNotNil( errorMessage, "errorMessage shouldn't be nil")
+		
+		request!.apiKey = apiKey;
+		request!.uid = nil;
+		(canSend, errorMessage) = request!.canSendRequest();
+		XCTAssert( canSend == false, "canSend should be true")
+		XCTAssertNotNil( errorMessage, "errorMessage shouldn't be nil")
+		
+		request!.apiKey = apiKey;
+		request!.uid = nil;
+		(canSend, errorMessage) = request!.canSendRequest();
+		XCTAssert( canSend == false, "canSend should be true")
+		XCTAssertNotNil( errorMessage, "errorMessage shouldn't be nil")
+		
+		request!.uid = uid;
+		request!.appid = nil;
+		(canSend, errorMessage) = request!.canSendRequest();
+		XCTAssert( canSend == false, "canSend should be true")
+		XCTAssertNotNil( errorMessage, "errorMessage shouldn't be nil")
+		
+		
+	}
 
 }
