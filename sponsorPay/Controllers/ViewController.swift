@@ -44,7 +44,7 @@ class ViewController: UIViewController, OfferFormViewDelegate {
 			}
 			else {
 				if result!.count == 0 {
-					
+					UIAlertView(title: "We're sorry", message: "No offers found", delegate: nil, cancelButtonTitle: "Ok");
 				}
 				else {
 					let vc: OffersViewController = OffersViewController(offers: result!)
