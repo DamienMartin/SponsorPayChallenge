@@ -12,7 +12,7 @@ protocol OfferFormViewDelegate {
 	func formDidValidate(offerRequest: OfferRequest);
 }
 
-class OfferFormView: UIView {
+class OfferFormView: UIScrollView {
 
 	// form input
 	var uidTextField: UITextField = UITextField()
@@ -24,7 +24,7 @@ class OfferFormView: UIView {
 	
 	
 	var loader: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.White);
-	var delegate: OfferFormViewDelegate?
+	var formDelegate: OfferFormViewDelegate?
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -36,25 +36,52 @@ class OfferFormView: UIView {
 		self.initialized()
 	}
 	
+	override func layoutSubviews() {
+		super.layoutSubviews()
+		self.resizeView()
+	}
+	
+	override func traitCollectionDidChange(previousTraitCollection: UITraitCollection) {
+		super.traitCollectionDidChange(previousTraitCollection);
+		self.resizeView()
+	}
+	
+	func resizeView() {
+		var yPosition = Float(self.validateButton.frame.origin.y + self.validateButton.frame.size.height)
+		self.contentSize = CGSizeMake(self.frame.size.width, CGFloat(yPosition) + 175 );
+		if(contentSize.height > self.bounds.size.height) {
+			self.scrollEnabled = true
+		}
+	}
+	
 	func initialized() {
+		
+		self.keyboardDismissMode = UIScrollViewKeyboardDismissMode.Interactive
+		
 		var offsetY: Float = 10
 		var offsetX: Float = 20
 		
 		var yPosition: Float = offsetY
 		self.uidTextField.formateTextField(self, horizontalOffset: offsetX, verticalPosition: yPosition, placeholder: "UID value")
+		self.uidTextField.accessibilityLabel = "uidTextField"
 		
 		yPosition += Float(self.uidTextField.frame.size.height) + offsetY
 		self.appIdTextField.formateTextField(self, horizontalOffset: offsetX, verticalPosition: yPosition, placeholder: "appID value")
+		self.appIdTextField.accessibilityLabel = "appIdTextField"
 		
 		yPosition += Float(self.appIdTextField.frame.size.height) + offsetY
 		self.apiKeyTextField.formateTextField(self, horizontalOffset: offsetX, verticalPosition: yPosition, placeholder: "apiKey value")
+		self.apiKeyTextField.accessibilityLabel = "apiKeyTextField"
 		
 		yPosition += Float(self.apiKeyTextField.frame.size.height) + offsetY
 		self.pub0TextField.formateTextField(self, horizontalOffset: offsetX, verticalPosition: yPosition, placeholder: "pub0 value")
+		self.pub0TextField.accessibilityLabel = "pub0TextField"
 		
 		// Validate button
 		yPosition += Float(self.pub0TextField.frame.size.height) + offsetY
 		self.validateButton.frame = CGRectMake(CGFloat(offsetX), CGFloat(yPosition), self.frame.size.width - (2 * CGFloat(offsetX) ), 45)
+		self.validateButton.isAccessibilityElement = true
+		self.validateButton.accessibilityLabel = "validateButton"
 		self.validateButton.backgroundColor = UIColor.blueColor()
 		validateButton.autoresizingMask = UIViewAutoresizing.FlexibleWidth;
 		self.validateButton.addTarget(self, action: Selector("validateForm") , forControlEvents: UIControlEvents.TouchUpInside)
@@ -62,9 +89,10 @@ class OfferFormView: UIView {
 		self.validateButton.setTitle("", forState: UIControlState.Disabled)
 		self.validateButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Highlighted)
 		self.validateButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-		self.addSubview(validateButton);
+		self.addSubview(validateButton)
 		
-		self.fillTextFieldWithDefaultValue();
+		self.resizeView()
+		self.fillTextFieldWithDefaultValue()
 	}
 	
 	func fillTextFieldWithDefaultValue() {
@@ -84,8 +112,8 @@ class OfferFormView: UIView {
 		
 		let (canSend, errorMessage: String?) = request.canSendRequest();
 		if canSend == true {
-			if delegate != nil {
-				delegate?.formDidValidate(request)
+			if formDelegate != nil {
+				formDelegate!.formDidValidate(request)
 			}
 		}
 		else {
