@@ -14,7 +14,7 @@ class Offer: NSObject {
 	var title:String?
 	var teaser:String?
 	var thumbnail:Thumbnail?
-	var payout:String?
+	var payout:Int?
 	
 	
 	override init() {
@@ -27,7 +27,7 @@ class Offer: NSObject {
 		if let thumbnailDict = dictionary.objectForKey("thumbnail") as? NSDictionary {
 			self.thumbnail = Thumbnail(dictionary: thumbnailDict)
 		}
-		self.payout = dictionary.objectForKey("payout") as? String
+		self.payout = dictionary.objectForKey("payout") as? Int
 		super.init()
 	}
 	

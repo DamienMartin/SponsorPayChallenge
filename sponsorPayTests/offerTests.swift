@@ -22,7 +22,7 @@ class offerTests: XCTestCase {
 
 	func parsingTest() {
 		
-		let dictionaryOk = ["title":"title1","teaser":"teaser1","payout":"payout1","thumbnail":["lowres":"lowres1","hires":"hires1"]]
+		let dictionaryOk = ["title":"title1","teaser":"teaser1","payout":123,"thumbnail":["lowres":"lowres1","hires":"hires1"]]
 		let offer = Offer(dictionary: dictionaryOk);
 		
 		XCTAssertNotNil( offer.title, "Title can't be nil")
@@ -34,7 +34,7 @@ class offerTests: XCTestCase {
 		
 		XCTAssertEqual( offer.title!, "title1", "Title not well setted : \(offer.title) != title1")
 		XCTAssertEqual( offer.teaser!, "teaser1", "Teaser not well setted : \(offer.teaser) != teaser1")
-		XCTAssertEqual( offer.payout!, "payout1", "Payout not well setted : \(offer.payout) != payout1")
+		XCTAssertEqual( offer.payout!, 123, "Payout not well setted : \(offer.payout) != payout1")
 		XCTAssertEqual( offer.thumbnail!.hires!, "hires1", "Hires not well setted : \(offer.thumbnail!.hires) != hires1")
 		XCTAssertEqual( offer.thumbnail!.lowres!, "lowres1", "Lowres not well setted : \(offer.thumbnail!.lowres) != lowres1")
 		
