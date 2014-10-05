@@ -18,7 +18,6 @@ class apiControllerTests: XCTestCase {
         super.setUp()
 		apiController = SponsorPayApiController();
 		request = OfferRequest();
-		request!.fixedTimestamp = "1234567890"
     }
     
     override func tearDown() {
@@ -27,6 +26,8 @@ class apiControllerTests: XCTestCase {
     }
 
 	func testApiUriGenerator() {
+
+		request!.fixedTimestamp = "1234567890"
 		
 		let uriForOffersEndPoint = apiController?.uriForEndPoint(SponsorPayEndPoint.Offers)
 		let correctUriForOffersEndPoint = "http://api.sponsorpay.com/feed/v1/offers.json"
@@ -38,4 +39,39 @@ class apiControllerTests: XCTestCase {
 		
 	}
 
+	func testCorrectAsynchronousCall() {
+		let expectation = expectationWithDescription("Sponsor Pay header hash")
+		
+		self.apiController?.getOffers(self.request!, completionHandler: { (results, error) -> Void in
+			
+			expectation.fulfill()
+			XCTAssertNotNil(results, "data should not be nil")
+			XCTAssertNil(error, "error should be nil")
+			
+		})
+
+		
+		waitForExpectationsWithTimeout(20, handler: { error in
+		})
+		
+	}
+	
+	func testWrongAsynchronousCall() {
+		let expectation = expectationWithDescription("Sponsor Pay header hash")
+		
+		request!.fixedTimestamp = "123456"
+		
+		self.apiController?.getOffers(self.request!, completionHandler: { (results, error) -> Void in
+			
+			expectation.fulfill()
+			XCTAssertNil(results, "data should be nil")
+			XCTAssertNotNil(error, "error should not be nil")
+			
+		})
+		
+		
+		waitForExpectationsWithTimeout(20, handler: { error in
+		})
+	}
+	
 }
