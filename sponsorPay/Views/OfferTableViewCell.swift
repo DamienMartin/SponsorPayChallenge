@@ -35,7 +35,7 @@ class OfferTableViewCell: UITableViewCell {
 		self.title?.text = offer.title
 		self.teaser?.text = offer.teaser
 		self.payout?.text = offer.payout?.description
-		self.downloadAndDisplayImage(offer.thumbnail?.hires)
+		self.downloadAndDisplayImage(offer.thumbnail?.lowres)
 	}
 	
 	func downloadAndDisplayImage(urlString: String?) {
